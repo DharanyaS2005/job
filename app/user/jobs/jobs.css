@@ -1,0 +1,66 @@
+/* jobs.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+.jobs-container {
+  max-width: 600px;
+  margin: 5px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.jobs-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #12214d;
+  font-weight: bold;
+}
+
+.job-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #12214d;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.apply-link {
+  display: inline-block;
+  background-color: #12214d;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.apply-link:hover {
+  background-color: #0056c1;
+}
