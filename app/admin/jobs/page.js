@@ -25,7 +25,7 @@ export default function AdminJobs() {
 
   const fetchJobs = async () => {
   try {
-    const res = await fetch('/api/jobs');
+    const res = await fetch('https://job-m75o.onrender.com/api/jobs');
     const data = await res.json();
 
     if (Array.isArray(data)) {
@@ -42,7 +42,7 @@ export default function AdminJobs() {
 
 
 const handleAdd = async () => {
-  const res = await fetch('/api/jobs', {
+  const res = await fetch('https://job-m75o.onrender.com/api/jobs', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ title, description, email: 'admin@gmail.com' }),
@@ -60,7 +60,7 @@ const handleAdd = async () => {
 
 
   const handleDelete = async (id) => {
-    await fetch(`/api/jobs/${id}`, { method: 'DELETE' });
+    await fetch(`https://job-m75o.onrender.com/api/jobs/${id}`, { method: 'DELETE' });
     fetchJobs();
   };
 
@@ -68,7 +68,7 @@ const handleAdd = async () => {
     setSelectedJobId(jobId);
     const token = localStorage.getItem('token');
 
-const res = await fetch(`/api/applicants?jobId=${jobId}`, {
+const res = await fetch(`https://job-m75o.onrender.com/api/applicants?jobId=${jobId}`, {
   headers: {
     Authorization: `Bearer ${token}`,
   },

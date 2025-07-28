@@ -17,7 +17,7 @@ export default function UserJobs() {
       return;
     }
 
-    fetch('/api/jobs', {
+    fetch('https://job-m75o.onrender.com/api/jobs', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

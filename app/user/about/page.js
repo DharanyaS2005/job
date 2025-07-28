@@ -11,8 +11,8 @@ const About = () => {
       <div className="about-left">
         <h1>About Our Job Board</h1>
         <p>
-          Welcome to our Internal Job Opening Board – a streamlined platform where employees can explore
-          and apply for open positions within the organization. It’s designed to encourage career growth
+          Welcome to our Internal Job Opening Board a streamlined platform where employees can explore
+          and apply for open positions within the organization. Its designed to encourage career growth
           and transparency within the company.
         </p>
         <p>

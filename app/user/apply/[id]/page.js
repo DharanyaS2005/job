@@ -34,7 +34,7 @@ export default function ApplyJob() {
     });
     formData.append('jobId', jobId);
 
-    const res = await fetch('/api/applications', {
+    const res = await fetch('https://job-m75o.onrender.com/api/applications', {
       method: 'POST',
       body: formData,
     });

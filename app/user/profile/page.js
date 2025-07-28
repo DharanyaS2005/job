@@ -10,7 +10,7 @@ export default function UserProfile() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    fetch('/api/user/profile', {
+    fetch('https://job-m75o.onrender.com/api/user/profile', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())
