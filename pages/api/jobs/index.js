@@ -19,9 +19,9 @@ export default async function handler(req, res) {
   const { title, description } = req.body;
 
   // Allow static admin without token
-  if (!authHeader && req.body?.email === 'admin@example.com') {
+  if (!authHeader && req.body?.email === 'admin@gmail.com') {
     try {
-      const job = await Job.create({ title, description, postedBy: 'admin@example.com' });
+      const job = await Job.create({ title, description, postedBy: 'admin@gmail.com' });
       return res.status(201).json(job);
     } catch (err) {
       return res.status(500).json({ error: 'Failed to create job' });

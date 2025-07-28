@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from '../navbar/Navbar';
 import './profile.css';
-import Image from 'next/image';
 export default function ProfilePage() {
   const router = useRouter();
 
@@ -18,11 +17,7 @@ export default function ProfilePage() {
       <Navbar /> 
     <div className="profile-container">
       <div className="profile-card">
-        <Image
-          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-          alt="Profile"
-          className="profile-img"
-        />
+       <img src="/pr.png" alt="Profile" className="profile-img" width="400" height="200" />
         <h2 className="profile-name">DHARANYA S</h2>
         <p className="profile-role">Internal Job Board Admin</p>
         <div className="profile-info">
