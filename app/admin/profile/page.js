@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Navbar from '../navbar/Navbar';
 import './profile.css';
-
+import Image from 'next/image';
 export default function ProfilePage() {
   const router = useRouter();
 
@@ -12,13 +12,13 @@ export default function ProfilePage() {
     if (isLoggedIn !== 'true') {
       router.push('/admin/login');
     }
-  }, []);
+  }, [router]);
   return (
     <div>
       <Navbar /> 
     <div className="profile-container">
       <div className="profile-card">
-        <img
+        <Image
           src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
           alt="Profile"
           className="profile-img"

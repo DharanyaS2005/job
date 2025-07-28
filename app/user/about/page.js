@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Navbar from '../navbar/Navbar';
+import Image from 'next/image'
 import './about.css';
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
         </p>
       </div>
       <div className="about-right">
-        <img src="https://www.roberthalf.com/content/dam/roberthalf/images/blogs/us/en/migrated-blogs/hr1/shutterstock_412257712-2.jpg" alt="Job Board Platform" />
+        <Image src="https://www.roberthalf.com/content/dam/roberthalf/images/blogs/us/en/migrated-blogs/hr1/shutterstock_412257712-2.jpg" alt="Job Board Platform" />
       </div>
       <footer className="about-footer">
         &copy; 2025 Internal Job Board. All rights reserved.
