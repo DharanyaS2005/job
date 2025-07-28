@@ -1,8 +1,12 @@
 import dbConnect from '../../../lib/db';
 import Job from '../../../models/job';
 import { verifyToken } from '../../../lib/auth';
+import initMiddleware from '@/lib/init-middleware'
+import cors from '@/lib/cors'
 
+const corsMiddleware = initMiddleware(cors)
 export default async function handler(req, res) {
+  await corsMiddleware(req, res)
   await dbConnect();
 
   if (req.method === 'GET') {

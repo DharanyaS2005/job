@@ -2,8 +2,14 @@
 import connectDB from '@/lib/db';
 import Applicant from '@/models/application';
 import { verifyToken } from '@/lib/auth';
+import initMiddleware from '@/lib/init-middleware'
+import cors from '@/lib/cors'
+
+const corsMiddleware = initMiddleware(cors)
+
 
 export default async function handler(req, res) {
+   await corsMiddleware(req, res)
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
