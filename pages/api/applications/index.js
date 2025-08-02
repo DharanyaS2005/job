@@ -5,7 +5,6 @@ import initMiddleware from '@/lib/init-middleware'
 import cors from '@/lib/cors'
 const corsMiddleware = initMiddleware(cors)
 
-// Storage setup to put files in /public/uploads
 const storage = multer.diskStorage({
   destination: './public/uploads',
   filename: (req, file, cb) => {
@@ -15,7 +14,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Disable Next.js default body parser
 export const config = {
   api: {
     bodyParser: false,
